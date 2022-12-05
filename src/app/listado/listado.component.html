@@ -1,0 +1,7 @@
+<p>listado works!</p>
+<ul *ngFor="let todo of todos">
+    <li>{{todo.text}}</li>
+</ul>
+<form (submit)="addTodo()">
+    <input type="text" [(ngModel)]="todoText" [ngModelOptions]="{standalone: true}">
+</form>

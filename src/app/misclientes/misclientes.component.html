@@ -1,0 +1,13 @@
+<p>misclientes works!</p>
+<form (submit)="addCliente()">
+    
+    <input type="text" [(ngModel)]="cliente.name" [ngModelOptions]="{standalone : true}"><br>
+    
+    <input type="text" [(ngModel)]="cliente.direccion" [ngModelOptions]="{standalone : true}">
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+
+<ul *ngFor="let cliente of clientes">
+    <li>{{cliente.name}},{{cliente.direccion}}</li>
+</ul>
